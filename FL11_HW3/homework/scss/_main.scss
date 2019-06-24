@@ -1,0 +1,355 @@
+@mixin zeroingAling{
+    padding: 0;
+    margin: 0;
+}
+@mixin underline {
+    display: block;
+    background: $underlineColor;
+    z-index: -1;
+}
+body {
+    width: 100vw;
+    @include zeroingAling;
+    background-color: $mainColor;
+}
+.header {
+    @extend body;
+    width: 100vw;
+    height: 96vh;
+    @include zeroingAling;
+    background: $backgroundImg no-repeat;
+    background-size: 100% 132vh;
+    background-position: left center;
+    border-bottom-right-radius: 50%;
+    .header-wrap {
+        width: 45vw;
+        height: 75%;
+        margin-left: 9vw;
+        text-align: start;
+        .landing-logo {
+            width: 60%;
+            @include zeroingAling;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+               width: 5.95vh;
+               height: 5.95vh;
+                margin-left: .27vw;
+                margin-top: 2vh;
+            }
+            p {
+                display: inline-block;
+                color: $darkFont;
+                height: 70%;
+                margin: 2.8vh 0 0 1.1vw;
+                font-family: $fontText;
+                line-height: 0.9em;
+                font-size: 1.29em;
+                font-weight: bold;
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: .45em;
+                    font-weight: bold;
+                    letter-spacing: normal;
+                }
+            }
+        }
+        .header_heading {
+            margin: 9.5vh 0 4.7vh 0;
+            padding-left: .4vw;
+            width: 75%;
+            color: $darkFont;
+            text-align:start;
+            font-family: $fontFamilyHeadersButtons;
+            font-size: 3.75em;
+            font-weight: bold;
+            line-height: 1.07em;
+            letter-spacing: .13vw;
+            &::after {
+                content: "";
+                @include underline;
+                width: 19.2vw;
+                height: 3.3vh;
+                margin-top: -3.3vh;
+
+            }
+        }
+        .header_text {
+            margin: 0;
+            padding-left: 0.5vw;
+            width: 100%;
+            color: #393541;
+            font-family: $fontText;
+            color: $darkFont;
+            white-space: pre-line;
+            font-size: .9em;
+            line-height: 1.5em;
+        }
+        button {
+            margin-left: 0.4vw;
+            margin-top: 8vh;
+            width: 20.5%;
+            height: 9%;
+            font-family: $fontFamilyHeadersButtons;
+            font-size: 1em;
+            color: $whiteFont;
+            font-weight: bold;
+            background: $buttonsColor;
+            border-radius: .2em;
+            border: none;
+            &:hover {
+                @extend button;
+                background: $hoverButtonsColor;
+                border: 2px solid $borderButton;
+            }
+        }
+    }
+}
+.section {
+    width: 100vw;
+    height: 105vh;
+    position: relative;
+    @include zeroingAling;
+    font-family: $fontFamilyHeadersButtons;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section_text {
+        padding: 4vh 0 0 0;
+        margin: 0;
+        width: 60%;
+        box-sizing: border-box;
+        height: 16vh;
+        text-align: center;
+        margin-right: 2.3vw;
+        margin-top: 0.15vh;
+        color: $darkFont;
+        font-size: 2.22em;
+        font-weight: bold;
+        &::after {
+            content: "";
+            @include underline;
+            width: 12vw;
+            height: 1.9vh;
+            margin-left: 30.5vw;
+            margin-top: -2.7vh;
+        }
+    }
+    .section_card_wrap {
+        margin-top: 0.5vh;
+        width: 78%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 2.5vw;
+        .section_card {
+            @include zeroingAling;
+            width: 32.5%;
+            height: 60.5vh;
+            background: $cardFooterColor;
+            border-radius: 1vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $whiteFont;
+            &:first-child .section_card_heading span {
+            @include underline;
+            width: 12vw;
+            height: 1.5vh;
+            margin-top: -1.6vh;
+            margin-left: 0.3vw;
+            }
+            &:nth-child(2) .section_card_heading span {
+                @include underline;
+                width: 9.9vw;
+                height: 1.5vh;
+                margin-top: -1.6vh;
+                margin-left: 1.4vw;
+                }
+                &:last-child .section_card_heading span {
+                    @include underline;
+                    width: 7.6vw;
+                    height: 1.5vh;
+                    margin-top: -1.6vh;
+                    margin-left: 2.6vw;
+                    }
+            .section_card_heading {
+                width: 50%;
+                height: 5vh;
+                color: $whiteFont;
+                font-family: $fontFamilyHeadersButtons;
+                font-size: 1.3em;
+                @include zeroingAling;
+                font-weight: bold;
+            }
+            .section_card_img {
+                @include zeroingAling;
+                margin-top: 2vh;
+                width: 90%;
+                height: 32.5vh;
+                border-radius: 0.2em;
+            }
+            .section_card_text {
+                font-family: $fontText;
+                width: 90%;
+                height: 18vh;
+                margin: 0;
+                padding: 0 0 1vh 0;
+                opacity: 0.6;
+                display:flex;
+                align-items: center;
+                font-size: 0.9em;
+                line-height: 1.5em;
+            }
+        }
+    }
+    $fontColors:(
+        heading: $darkFont,
+        text: $whiteFont
+    );
+    .section_banner_ {
+        @each $key, $value in $fontColors {
+            &#{$key} {
+                color: $value;
+            }
+        }
+    }
+    .section_banner {
+        width: 61.4vw;
+        height: 19vh;
+        margin-right: 2.4vw;
+        z-index: 2;
+        background: $bannerColor;
+        border-radius: 0.3em;
+        position: absolute;
+        top: 95.5vh;
+        right: 18vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        .section_banner_text_wrap {
+            width: 50%;
+            height: 80%;
+            margin-left: -0.5vw;
+            .section_banner_heading {
+                font-size: 1.7em;
+                letter-spacing: -0.03vw;
+                font-weight: bold;
+                font-family: $fontFamilyHeadersButtons;
+                box-sizing: border-box;
+                text-align: left;
+                margin-top: 1.3vh;
+                padding: 0;
+                &::after {
+                    content: "";
+                    @include underline;
+                    width: 4.2vw;
+                    height: 1.7vh;
+                    margin-top: -2.1vh;
+                    margin-left: 7.6vw;
+                }
+            }
+            .section_banner_text {
+                font-family: $fontText;
+                font-size: 0.85em;
+                word-spacing: 0.15vw;
+                box-sizing: border-box;
+                margin-top: -1.3vh;
+            }
+        }
+        .section_banner_button {
+            width: 14.6%;
+            height: 34.8%;
+            margin-left: 1.55vw;
+            margin-top: 0.47vh;
+            text-align: center;
+            font-family: $fontFamilyHeadersButtons;
+            font-size: 1em;
+            color: $whiteFont;
+            font-weight: bold;
+            background: $buttonsColor;
+            border-radius: .2em;
+            border: none;
+            &:hover {
+                @extend button;
+                background: $hoverButtonsColor;
+                border: 2px solid $borderButton;
+            }
+        }
+    }
+}
+.footer {
+    width: 100vw;
+    height: 32vh;
+    background: $cardFooterColor;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    .footer-wrap {
+        width: 82%;
+        height: 10vh;
+        margin: 10vh auto;
+    }
+    .landing-logo {
+        width: 30%;
+        margin-top: 5.5vh;
+        padding: 0;
+        float: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+           width: 5.95vh;
+           height: 5.95vh;
+            margin-left: .27vw;
+            margin-top: 2vh;
+        }
+        p {
+            display: inline-block;
+            color: $whiteFont;
+            height: 70%;
+            margin: 2.8vh 0 0 1.1vw;
+            font-family: $fontText;
+            line-height: 0.9em;
+            font-size: 1.29em;
+            font-weight: bold;
+            span {
+                display: block;
+                text-align: center;
+                font-size: .45em;
+                font-weight: bold;
+                letter-spacing: normal;
+            }
+        }
+    }
+    .footer_text {
+            margin-left: 3vw;
+            margin-top: 6.8vh;
+            word-spacing: -0.05vw;
+            width: 24%;
+            color: $whiteFont;
+            font-family: $fontText;
+            text-align: left;
+            font-size: .79em;
+            line-height: 1.5em;
+            float: left;
+    }
+    .footer-cr {
+        display: block;
+        float: right;
+        margin-right: 2.4vw;
+        margin-top: 9vh;
+        font-family: $fontText;
+        color: $whiteFont;
+        font-size: .9em;
+    }
+}
