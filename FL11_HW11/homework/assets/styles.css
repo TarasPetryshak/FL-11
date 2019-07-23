@@ -1,0 +1,95 @@
+#root  {
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 16px;
+    color: rgb(68, 192, 241);
+}
+.header {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-action-section {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#add-action-field {
+    width: 95%;
+    margin: 0;
+    height: 65%;
+    padding-left: 1vw;
+    box-sizing: border-box;
+}
+.add-action-btn {
+    width: 5%;
+    height: 60%;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.add-action-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+.add-action-btn i {
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    color: rgb(214, 211, 211);
+}
+.line {
+    height: 1vh;
+    background: rgb(187, 224, 238);
+}
+.wrap-action-field {
+    width: 100%;
+    height: 8vh;
+    display: none;
+}
+.action-field {
+    width: 100%;
+    height: 7vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+i:hover {
+    cursor: pointer;
+}
+.done {
+    width: 4vh;
+    height: 4vh;
+    background: #fff;
+}
+.action {
+    height: 70%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(68, 192, 241);
+    font-weight: bold;
+}
+.icon-save {
+    display: none;
+}
+.icon-delete {
+    display: block;
+    position: absolute;
+    right: 1vw;
+}
+h4 {
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+}
