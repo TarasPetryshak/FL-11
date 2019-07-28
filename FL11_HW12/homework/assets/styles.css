@@ -1,0 +1,90 @@
+#root {
+    width: 100%;
+}
+.page-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrap-input {
+    margin-bottom: 20px;
+}
+input {
+    border-radius: 5px;
+}
+input:focus {
+    transform: scale(1.2);
+}
+button {
+    border-radius: 5px;
+    margin: 10px;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+p {
+    font-size: 2rem;
+}
+#add,
+#modify {
+    display: none;
+}
+.doneButton {
+    width: 25px;
+    height: 25px;
+    margin-right: 2px;
+    margin-bottom: -5px;
+    content: url(img/todo-s.png);
+}
+.doneButton:focus,
+.doneButton:active {
+    cursor: default;
+    transform: none;
+}
+.doneButton:checked {
+    content: url(img/done-s.png);
+}
+.descriptionItem {
+    height: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: transparent;
+    font-size: 1.2rem;
+}
+.removeButton {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+    margin-bottom: -5px;
+    content: url(img/remove-s.jpg);
+}
+.custom-alert {
+    width: 20%;
+    height: 100px;
+    background: red;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    color: #fff;
+}
+.custom-alert p {
+    font-size: 1rem;
+}
+.custom-alert-modify {
+    width: 20%;
+    height: 100px;
+    background: red;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    color: #fff;
+}
+.custom-alert-modify p {
+    font-size: 1rem;
+}

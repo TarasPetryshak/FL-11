@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="custom-alert">
+      <h4 class="">Error!</h4>
+      <p>You can't edit already done item</p>
+    </div>
+    <div class="custom-alert-modify">
+      <h4 class="">Error!</h4>
+      <p> You can't add already exist item</p>
+    </div>
+    <div class="page-container" id="main-page">
+      <h1 id="header-main-page">Simple TODO application</h1>
+      <button type="button" name="button-main-page" value="" id="button-main-page">Add new task</button>
+      <p class="main-page-hint">TODO list is empty</p>
+    </div>
+    <div class="page-container" id="add">
+      <h1 class="header-add-page">Add task</h1>
+      <div class="wrap-input">
+        <input type="text" name="add-task-input" id="add-task-input" value="">
+      </div>
+      <div class="wrap-buttons">
+        <button type="button" name="cancel-button-add-page" value="" id="cancel-button-add-page">Cancel</button>
+        <button type="button" name="save-button-add-page" value="" id="save-button-add-page">Save changes</button>
+      </div>
+    </div>
+    <div class="page-container" id="modify">
+      <h1 class="header-modify-page">Modify item</h1>
+      <div class="wrap-input">
+        <input type="text" name="modify-input" id="modify-input" value="">
+      </div>
+      <div class="wrap-buttons">
+        <button type="button" name="cancel-button-modify-page" value="" id="cancel-button-modify-page">Cancel</button>
+        <button type="button" name="save-button-modify-page" value="" id="save-button-modify-page">Save changes</button>
+      </div>
+    </div>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
